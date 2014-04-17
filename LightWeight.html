@@ -1,0 +1,28 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="website" style="float:left">
+      World's Lightest Weight Website Editor
+    </div>  
+
+    <textarea id="source_code" cols="80" rows="100" style="float:right; font-family:monospace">
+    </textarea>
+
+    <script>
+
+    var source_code = document.getElementById("source_code");
+    source_code.value=document.getElementById("website").innerHTML;
+
+    source_code.addEventListener("keypress",  function(e){
+      if (e.keyCode==32){
+        console.log(e.keyCode)
+        var image = source_code.value;
+        var website = document.getElementById("website");
+        website.innerHTML=image;
+      }
+    }, false);
+
+    </script>
+  </body>
+</html>
